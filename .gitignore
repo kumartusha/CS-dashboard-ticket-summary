@@ -1,0 +1,11 @@
+# Ignore the Google Service Account credentials to prevent security leaks
+service_account.json
+
+# Standard Python ignores
+__pycache__/
+*.pyc
+.env
+.venv
+env/
+venv/
+.DS_Store
