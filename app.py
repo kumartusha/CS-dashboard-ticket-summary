@@ -61,13 +61,25 @@ def main():
         submitted = st.form_submit_button("Search Tickets")
 
     # Defined columns for output mapping
+    # display_columns = {
+    #     'Status (Ticket)': 'Ticket Status',
+    #     'Customer Name': 'Customer Name',
+    #     'Phone (Ticket)': 'Phone Number',
+    #     'Created Time (Ticket)': 'Ticket Created Time',
+    #     'Last Customer Connect Date': 'Last Customer Connect Date',
+    #     'Due Date': 'Due Date'
+    # }
     display_columns = {
         'Status (Ticket)': 'Ticket Status',
         'Customer Name': 'Customer Name',
         'Phone (Ticket)': 'Phone Number',
         'Created Time (Ticket)': 'Ticket Created Time',
-        'Last Customer Connect Date': 'Last Customer Connect Date',
-        'Due Date': 'Due Date'
+        # 'Last Customer Connect Date': 'Last Customer Connect Date',
+        'Due Date': 'Due Date',
+        'Type of Escalation': 'Type of Escalation',
+        'Registration Number': 'Registration Number',
+        'Store Name': 'Store Name',
+        'Vehicle Delivery Date': 'Vehicle Delivery Date'
     }
 
     if submitted:
@@ -108,14 +120,26 @@ def main():
                 for idx, row in result_df.iterrows():
                     with st.container(border=True):
                         col1, col2 = st.columns(2)
+                        # with col1:
+                        #     st.markdown(f"**🏷️ Ticket Status:** {row['Ticket Status']}")
+                        #     st.markdown(f"**👤 Customer Name:** {row['Customer Name']}")
+                        #     st.markdown(f"**📞 Phone Number:** {row['Phone Number']}")
+                        # with col2:
+                        #     st.markdown(f"**🕒 Ticket Created Time:** {row['Ticket Created Time']}")
+                        #     st.markdown(f"**📅 Last Connect Date:** {row['Last Customer Connect Date']}")
+                        #     st.markdown(f"**📅 Due Date:** {row['Due Date']}")
                         with col1:
+                            st.markdown(f"**🏷️ Registration Number:** {row['Registration Number']}")
                             st.markdown(f"**🏷️ Ticket Status:** {row['Ticket Status']}")
                             st.markdown(f"**👤 Customer Name:** {row['Customer Name']}")
                             st.markdown(f"**📞 Phone Number:** {row['Phone Number']}")
+                            st.markdown(f"**📞 Vehicle Delivery Date:** {row['Vehicle Delivery Date']}")
+
                         with col2:
                             st.markdown(f"**🕒 Ticket Created Time:** {row['Ticket Created Time']}")
-                            st.markdown(f"**📅 Last Connect Date:** {row['Last Customer Connect Date']}")
                             st.markdown(f"**📅 Due Date:** {row['Due Date']}")
+                            st.markdown(f"** Type of Escalation:** {row['Type of Escalation']}")
+                            st.markdown(f"** Store Name:** {row['Store Name']}")
 
 if __name__ == "__main__":
     main()
