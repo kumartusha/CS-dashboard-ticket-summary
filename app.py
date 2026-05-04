@@ -129,7 +129,7 @@ def main():
                         #     st.markdown(f"**📅 Last Connect Date:** {row['Last Customer Connect Date']}")
                         #     st.markdown(f"**📅 Due Date:** {row['Due Date']}")
                         with col1:
-                            st.markdown(f"**🏷️ Registration Number:** {row['Registration Number']}")
+                            st.markdown(f"**🏷️ Registration Number:- ** {row['Registration Number']}")
                             st.markdown(f"**🏷️ Ticket Status:** {row['Ticket Status']}")
                             st.markdown(f"**👤 Customer Name:** {row['Customer Name']}")
                             st.markdown(f"**📞 Phone Number:** {row['Phone Number']}")
