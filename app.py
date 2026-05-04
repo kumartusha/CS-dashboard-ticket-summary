@@ -133,13 +133,13 @@ def main():
                             st.markdown(f"**🏷️ Ticket Status:** {row['Ticket Status']}")
                             st.markdown(f"**👤 Customer Name:** {row['Customer Name']}")
                             st.markdown(f"**📞 Phone Number:** {row['Phone Number']}")
-                            st.markdown(f"**📞 Vehicle Delivery Date:** {row['Vehicle Delivery Date']}")
+                            st.markdown(f"**📅 Vehicle Delivery Date:** {row['Vehicle Delivery Date']}")
 
                         with col2:
                             st.markdown(f"**🕒 Ticket Created Time:** {row['Ticket Created Time']}")
                             st.markdown(f"**📅 Due Date:** {row['Due Date']}")
-                            st.markdown(f"** Type of Escalation:** {row['Type of Escalation']}")
-                            st.markdown(f"** Store Name:** {row['Store Name']}")
+                            st.markdown(f"**␛ Type of Escalation:** {row['Type of Escalation']}")
+                            st.markdown(f"**🏬 Store Name:** {row['Store Name']}")
 
 if __name__ == "__main__":
     main()
