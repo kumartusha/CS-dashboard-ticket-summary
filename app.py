@@ -138,6 +138,7 @@ def main():
                         with col2:
                             st.markdown(f"**🕒 Ticket Created Time:** {row['Ticket Created Time']}")
                             st.markdown(f"**📅 Due Date:** {row['Due Date']}")
+                            st.markdown(f"**📅 Revised Due Date:** {row['Revised Due Date']}")
                             st.markdown(f"**␛ Type of Escalation:** {row['Type of Escalation']}")
                             st.markdown(f"**🏬 Store Name:** {row['Store Name']}")
 
