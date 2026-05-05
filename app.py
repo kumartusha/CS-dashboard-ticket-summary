@@ -194,7 +194,7 @@ def load_data():
         return pd.DataFrame()
 
 def main():
-    st.title("🎫 Ticket Search Dashboard")
+    st.title("Ticket Search Dashboard")
     st.markdown("Search for ticket details using **Ticket ID**, **Registration Number**, or **both**.")
 
     df = load_data()
@@ -220,6 +220,7 @@ def main():
     #     'Due Date': 'Due Date'
     # }
     display_columns = {
+        'Ticket Id': 'Ticket ID',
         'Status (Ticket)': 'Ticket Status',
         'Customer Name': 'Customer Name',
         'Phone (Ticket)': 'Phone Number',
@@ -278,7 +279,7 @@ def main():
                     # Single ticket - display full width
                     row = result_df.iloc[0]
                     with st.container(border=True):
-                        st.markdown(f"**🎫 Ticket #1**")
+                        st.markdown(f"**🎫 Ticket ID: {row['Ticket ID']}**")
                         col1, col2 = st.columns(2)
                         
                         with col1:
@@ -300,7 +301,7 @@ def main():
                     st.markdown("---")
                     
                     for i, row in result_df.iterrows():
-                        with st.expander(f"🎫 Ticket #{i + 1} - {row['Registration Number']} ({row['Ticket Status']})", expanded=False):
+                        with st.expander(f"🎫 **Ticket ID:**  {row['Ticket ID']}", expanded=False):
                             col1, col2 = st.columns(2)
                             
                             with col1:
