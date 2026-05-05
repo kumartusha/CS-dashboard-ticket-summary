@@ -76,6 +76,7 @@ def main():
         'Created Time (Ticket)': 'Ticket Created Time',
         # 'Last Customer Connect Date': 'Last Customer Connect Date',
         'Due Date': 'Due Date',
+        'Revised Due Date': 'Revised Due Date',
         'Type of Escalation': 'Type of Escalation',
         'Registration Number': 'Registration Number',
         'Store Name': 'Store Name',
